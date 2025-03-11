@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>席替えメーカー</title>
+  <!-- 2種類のフォントを読み込み -->
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>席替えメーカー</h1>
+  <!-- セル配置領域 -->
+  <div id="gridContainer">
+    <!-- 領域右上の＋／－コントロール -->
+    <div id="gridControls">
+      <button id="addSeatButton">＋</button>
+      <button id="removeSeatButton">－</button>
+    </div>
+    <!-- 完了メッセージ -->
+    <div id="completionMessage">完了‼</div>
+    <!-- カウントダウンオーバーレイ -->
+    <div id="countdownOverlay"></div>
+  </div>
+  <button id="shuffleButton">席替えする</button>
+  
+ <script src="js/script.js"></script>
+</body>
+</html>

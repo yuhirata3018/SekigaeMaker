@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/* 全体レトロ8ビット風 */
+body {
+  background: #000;
+  color: #ffcc00;
+  font-family: 'DotGothic16', sans-serif; /* 初期はDotGothic16（日本語用） */
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+/* グリッド領域：背景は控えめなグリッドライン */
+#gridContainer {
+  position: relative;
+  margin: 0 auto;
+  background: #330033;
+  border: 4px solid #ff69b4;
+  min-width: 800px;
+  min-height: 600px;
+  overflow: visible;
+  background-image: 
+     repeating-linear-gradient(90deg, rgba(255,204,0,0.2), rgba(255,204,0,0.2) 1px, transparent 1px, transparent 110px),
+     repeating-linear-gradient(180deg, rgba(255,204,0,0.2), rgba(255,204,0,0.2) 1px, transparent 1px, transparent 110px);
+}
+/* 領域右上の＋／－ボタン */
+#gridControls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+#gridControls button {
+  background: #ffcc00;
+  color: #000;
+  border: 2px solid #ff3333;
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 16px;
+  padding: 4px 8px;
+  margin: 2px;
+  cursor: pointer;
+}
+/* 席替えボタン */
+#shuffleButton {
+  background: #ffcc00;
+  color: #000;
+  border: 4px solid #ff3333;
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+/* セル（席）のスタイル */
+.seat {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #ff99cc;
+  border: 2px solid #ff3333;
+  box-shadow: 2px 2px 0 #ffff66;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: move;
+  user-select: none;
+}
+/* input 要素は初期フォント指定はなし。後でJSで更新します */
+.seat input {
+  width: 90%;
+  background: transparent;
+  border: none;
+  text-align: center;
+  font-size: 12px;
+  color: #000;
+  outline: none;
+}
+/* 完了メッセージ */
+#completionMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: #ff69b4;
+  background: rgba(255,255,255,0.8);
+  padding: 10px 20px;
+  border: 3px solid #ff3333;
+  display: none;
+  z-index: 2000;
+}
+/* カウントダウンオーバーレイ */
+#countdownOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 80px;
+  color: #000;
+  background: rgba(255,255,255,0.9);
+  padding: 20px 40px;
+  border: 4px solid #ff3333;
+  display: none;
+  z-index: 3000;
+}
