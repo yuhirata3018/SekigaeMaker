@@ -13,4 +13,4 @@
 # リンク
 下記のリンクからページに移行します。
 
-http://127.0.0.1:3000/SekigaeMaker/sekigae.html
+http://ss931730.stars.ne.jp/portfolio/SekigaeMaker/sekigae.html
